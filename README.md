@@ -33,13 +33,17 @@ Projeto desenvolvido como parte do processo seletivo do Programa Lighthouse (Ind
 ## 📁 Estrutura do Repositório
 
 ```text
-├── README.md
-├── schema.sql
-└── scripts/
-    ├── q1_exploratory.sql
-    ├── q2_schema_generator.py
-    ├── q3_etl_loader.py
-    ├── q4_customer_analysis.sql
-    ├── q5_calendar_dimension.sql
-    ├── q6_demand_forecast.py
-    └── q7_recommendation.py
+.
+├── data/                   # Arquivos CSV originais do desafio
+├── src/                    # Scripts Python e queries SQL
+│   ├── 01_eda_orders.sql
+│   ├── 02_generate_schema.py
+│   ├── 03_load_data.py
+│   ├── 04_client_analysis.sql
+│   ├── 05_dim_calendar.sql
+│   ├── 06_demand_forecast.py
+│   └── 07_recommender.py
+├── output/                 # Arquivos gerados (ex: schema.sql)
+├── dashboard/              # Painéis e relatórios de BI
+├── README.md               # Documentação executiva do projeto
+└── requirements.txt        # Dependências do projeto Python
