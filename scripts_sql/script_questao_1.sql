@@ -1,4 +1,13 @@
--- Questão 1.1:
+-- Questão 1.1: Análise Exploratória e Métricas Agregadas da tabela orders
+/* 
+   NOTA DE AUDITORIA E DATA QUALITY:
+   - A coluna 'total' está armazenada como texto, exigindo o casting explícito para ::NUMERIC.
+   - Observou-se que pedidos com status 'cancelled' mantêm valores na coluna total, 
+     o que pode distorcer o faturamento real se não forem filtrados em etapas futuras.
+   - A data máxima registrada avança para dias futuros, exigindo validação do pipeline 
+     de ingestão com o time de engenharia/negócios.
+*/
+
 SELECT * -- selecao completa das colunas, já verifico o status das compras, se teve desconto, valor total (presumo que seja em Real), data registrada como datetime, subtotal, desconto e total registrados como texto
 FROM  orders o -- conforme solicitado
 LIMIT 10 -- uso de poucas linhas para não travar o banco

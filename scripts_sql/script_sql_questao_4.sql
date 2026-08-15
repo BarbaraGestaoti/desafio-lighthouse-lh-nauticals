@@ -1,4 +1,4 @@
--- MINI-PASSO 1: Calcular Ticket Médio e Diversidade para cada cliente
+-- Calcular Ticket Médio e Diversidade para cada cliente
 SELECT 
     o.customer_id,
     SUM(o.total::NUMERIC) / COUNT(DISTINCT o.id) AS ticket_medio,
